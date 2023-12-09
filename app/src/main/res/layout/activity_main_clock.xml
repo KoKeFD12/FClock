@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainClockActivity">
+
+    <AnalogClock
+        android:id="@+id/analog_clock"
+        android:layout_width="200sp"
+        android:layout_height="200sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="70sp"
+    />
+
+    <ImageButton
+        android:id="@+id/timer_image_button"
+        android:layout_width="100sp"
+        android:layout_height="100sp"
+        android:contentDescription="@string/timer_image_button_contentDescription"
+        app:layout_constraintTop_toBottomOf="@id/analog_clock"
+        android:layout_marginTop="40sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/baseline_av_timer_50"
+        android:background="@color/white"
+        />
+
+    <ImageButton
+        android:id="@+id/alarm_image_button"
+        android:layout_width="100sp"
+        android:layout_height="100sp"
+        android:contentDescription="@string/alarm_image_button_contentDescription"
+        app:layout_constraintTop_toBottomOf="@id/timer_image_button"
+        android:layout_marginTop="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/baseline_more_time_50"
+        android:background="@color/white"
+        />
+
+    <ImageButton
+        android:id="@+id/settings_image_button"
+        android:layout_width="100sp"
+        android:layout_height="100sp"
+        android:contentDescription="@string/settings_image_button_contentDescription"
+        app:layout_constraintTop_toBottomOf="@id/alarm_image_button"
+        android:layout_marginTop="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/baseline_settings_50"
+        android:background="@color/white"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

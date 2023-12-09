@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="login_text">Iniciar Sesión</string>
+    <string name="alarm_image_button_contentDescription">Alarma</string>
+    <string name="timer_image_button_contentDescription">Cronómetro</string>
+    <string name="settings_image_button_contentDescription">Ajustes</string>
+    <string name="login_email_hint">Correo electrónico</string>
+    <string name="login_password_hint">Contraseña</string>
+    <string name="login_button">Entrar</string>
+    <string name="guest_login_clickable_text_view">Entrar como invitado</string>
+</resources>
