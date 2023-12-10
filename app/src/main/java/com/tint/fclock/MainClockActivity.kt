@@ -1,5 +1,6 @@
 package com.tint.fclock
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -12,16 +13,20 @@ class MainClockActivity : AppCompatActivity() {
 
         val timerBtn = findViewById<ImageButton>(R.id.timer_image_button)
         val alarmBtn = findViewById<ImageButton>(R.id.alarm_image_button)
+        val stopwatchBtn = findViewById<ImageButton>(R.id.stopwatch_image_button)
         val settingsBtn = findViewById<ImageButton>(R.id.settings_image_button)
 
         timerBtn.setOnClickListener {
-            Log.i("Test", "Timer pressed.")
+            startActivity(Intent(this, TimerActivity::class.java))
         }
         alarmBtn.setOnClickListener {
-            Log.i("Test", "Alarm pressed.")
+            startActivity(Intent(this, AlarmsActivity::class.java))
+        }
+        stopwatchBtn.setOnClickListener {
+            startActivity(Intent(this, StopwatchActivity::class.java))
         }
         settingsBtn.setOnClickListener {
-            Log.i("Test", "Settings pressed.")
+            startActivity(Intent(this, SettingsActivity::class.java))
         }
     }
 }

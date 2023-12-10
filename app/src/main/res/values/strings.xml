@@ -5,7 +5,18 @@
     <string name="login_password_hint" translatable="true">Password</string>
     <string name="login_button" translatable="true">Enter</string>
     <string name="guest_login_clickable_text_view" translatable="true"><u>Log in as guest</u></string>
+
     <string name="alarm_image_button_contentDescription" translatable="true">Alarm</string>
     <string name="timer_image_button_contentDescription" translatable="true">Timer</string>
     <string name="settings_image_button_contentDescription" translatable="true">Settings</string>
+    <string name="play_image_button_contentDescription" translatable="true">Play</string>
+    <string name="pause_image_button_contentDescription" translatable="true">Pause</string>
+    <string name="stop_image_button_contentDescription" translatable="true">Stop</string>
+
+    <string name="time_picker_button" translatable="false">+</string>
+    <string name="title_activity_alarm" translatable="true">Alarms</string>
+    <string name="title_activity_settings" translatable="true">Settings</string>
+    <string name="title_activity_stopwatch" translatable="true">Stopwatch</string>
+    <string name="default_time_activity_stopwatch" translatable="false">00:00:00</string>
+
 </resources>

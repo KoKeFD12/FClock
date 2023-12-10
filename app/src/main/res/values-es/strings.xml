@@ -8,4 +8,10 @@
     <string name="login_password_hint">Contraseña</string>
     <string name="login_button">Entrar</string>
     <string name="guest_login_clickable_text_view">Entrar como invitado</string>
+    <string name="title_activity_settings">Ajustes</string>
+    <string name="title_activity_stopwatch">Cronómetro</string>
+    <string name="play_image_button_contentDescription">Iniciar</string>
+    <string name="pause_image_button_contentDescription">Pausar</string>
+    <string name="title_activity_alarm">Alarmas</string>
+    <string name="stop_image_button_contentDescription">Detener</string>
 </resources>

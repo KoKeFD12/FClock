@@ -13,7 +13,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="70sp"
+        android:layout_marginTop="50sp"
     />
 
     <ImageButton
@@ -22,7 +22,7 @@
         android:layout_height="100sp"
         android:contentDescription="@string/timer_image_button_contentDescription"
         app:layout_constraintTop_toBottomOf="@id/analog_clock"
-        android:layout_marginTop="40sp"
+        android:layout_marginTop="30sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:src="@drawable/baseline_av_timer_50"
@@ -35,10 +35,21 @@
         android:layout_height="100sp"
         android:contentDescription="@string/alarm_image_button_contentDescription"
         app:layout_constraintTop_toBottomOf="@id/timer_image_button"
-        android:layout_marginTop="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:src="@drawable/baseline_more_time_50"
+        android:background="@color/white"
+        />
+
+    <ImageButton
+        android:id="@+id/stopwatch_image_button"
+        android:layout_width="100sp"
+        android:layout_height="100sp"
+        android:contentDescription="@string/alarm_image_button_contentDescription"
+        app:layout_constraintTop_toBottomOf="@id/alarm_image_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/outline_timer_50"
         android:background="@color/white"
         />
 
@@ -47,8 +58,7 @@
         android:layout_width="100sp"
         android:layout_height="100sp"
         android:contentDescription="@string/settings_image_button_contentDescription"
-        app:layout_constraintTop_toBottomOf="@id/alarm_image_button"
-        android:layout_marginTop="20sp"
+        app:layout_constraintTop_toBottomOf="@id/stopwatch_image_button"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:src="@drawable/baseline_settings_50"
