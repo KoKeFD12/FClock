@@ -13,10 +13,6 @@
         android:theme="@style/Theme.FClock"
         tools:targetApi="31">
         <activity
-            android:name=".SettingsActivity"
-            android:exported="false"
-            android:label="@string/title_activity_settings" />
-        <activity
             android:name=".TimerActivity"
             android:exported="false" />
         <activity
@@ -37,6 +33,7 @@
         <activity
             android:name=".MainClockActivity"
             android:exported="true" />
+        <service android:name=".StopWatchTimerService"/>
     </application>
 
 </manifest>

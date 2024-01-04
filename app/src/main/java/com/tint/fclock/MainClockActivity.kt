@@ -14,7 +14,6 @@ class MainClockActivity : AppCompatActivity() {
         val timerBtn = findViewById<ImageButton>(R.id.timer_image_button)
         val alarmBtn = findViewById<ImageButton>(R.id.alarm_image_button)
         val stopwatchBtn = findViewById<ImageButton>(R.id.stopwatch_image_button)
-        val settingsBtn = findViewById<ImageButton>(R.id.settings_image_button)
 
         timerBtn.setOnClickListener {
             startActivity(Intent(this, TimerActivity::class.java))
@@ -24,9 +23,6 @@ class MainClockActivity : AppCompatActivity() {
         }
         stopwatchBtn.setOnClickListener {
             startActivity(Intent(this, StopwatchActivity::class.java))
-        }
-        settingsBtn.setOnClickListener {
-            startActivity(Intent(this, SettingsActivity::class.java))
         }
     }
 }
