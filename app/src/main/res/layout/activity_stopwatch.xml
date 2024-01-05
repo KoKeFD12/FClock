@@ -33,32 +33,32 @@
         />
 
     <Button
-        android:id="@+id/play_imageButton"
+        android:id="@+id/playButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toEndOf="@id/stop_imageButton"
-        app:layout_constraintEnd_toStartOf="@id/pause_imageButton"
+        app:layout_constraintStart_toEndOf="@id/stopButton"
+        app:layout_constraintEnd_toStartOf="@id/pauseButton"
         app:layout_constraintTop_toBottomOf="@id/stopwatchTimeTextView"
         android:layout_marginTop="100sp"
         android:text="PLAY"
         />
 
     <Button
-        android:id="@+id/stop_imageButton"
+        android:id="@+id/stopButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/play_imageButton"
+        app:layout_constraintEnd_toStartOf="@id/playButton"
         app:layout_constraintTop_toBottomOf="@id/stopwatchTimeTextView"
         android:layout_marginTop="100sp"
         android:text="STOP"
         />
 
     <Button
-        android:id="@+id/pause_imageButton"
+        android:id="@+id/pauseButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toEndOf="@id/play_imageButton"
+        app:layout_constraintStart_toEndOf="@id/playButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/stopwatchTimeTextView"
         android:layout_marginTop="100sp"

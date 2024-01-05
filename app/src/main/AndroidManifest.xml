@@ -33,7 +33,6 @@
         <activity
             android:name=".MainClockActivity"
             android:exported="true" />
-        <service android:name=".StopWatchTimerService"/>
     </application>
 
 </manifest>
