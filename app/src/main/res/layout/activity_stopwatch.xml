@@ -36,22 +36,24 @@
         android:id="@+id/playButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toEndOf="@id/stopButton"
+        app:layout_constraintStart_toEndOf="@id/resetButton"
         app:layout_constraintEnd_toStartOf="@id/pauseButton"
         app:layout_constraintTop_toBottomOf="@id/stopwatchTimeTextView"
         android:layout_marginTop="100sp"
         android:text="PLAY"
+        android:enabled="true"
         />
 
     <Button
-        android:id="@+id/stopButton"
+        android:id="@+id/resetButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toStartOf="@id/playButton"
         app:layout_constraintTop_toBottomOf="@id/stopwatchTimeTextView"
         android:layout_marginTop="100sp"
-        android:text="STOP"
+        android:text="RESET"
+        android:enabled="false"
         />
 
     <Button
@@ -63,6 +65,7 @@
         app:layout_constraintTop_toBottomOf="@id/stopwatchTimeTextView"
         android:layout_marginTop="100sp"
         android:text="PAUSE"
+        android:enabled="false"
         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

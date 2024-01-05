@@ -6,6 +6,83 @@
     android:layout_height="match_parent"
     tools:context=".TimerActivity">
 
-<!--    TODO: Design of the timer.-->
+    <TextView
+        android:id="@+id/timerTitleTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="70sp"
+        android:text="Timer"
+        android:textSize="30sp"
+        android:textColor="@color/black"
+        />
+
+    <TextView
+        android:id="@+id/countDownTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/timerTitleTV"
+        android:layout_marginTop="160px"
+        android:visibility="invisible"
+        />
+
+    <NumberPicker
+        android:id="@+id/minutesNP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@id/timerSeparatorTV"
+        app:layout_constraintTop_toBottomOf="@id/timerTitleTV"
+        android:visibility="visible"
+        />
+
+    <TextView
+        android:text=":"
+        android:textSize="100px"
+        android:id="@+id/timerSeparatorTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/timerTitleTV"
+        android:layout_marginTop="160px"
+        />
+
+    <NumberPicker
+        android:id="@+id/secondsNP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/timerSeparatorTV"
+        app:layout_constraintTop_toBottomOf="@id/timerTitleTV"
+        android:visibility="visible"
+        />
+
+    <Button
+        android:id="@+id/stopTimerBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="STOP"
+        android:enabled="false"
+        android:layout_marginTop="300px"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/timerSeparatorTV"
+        app:layout_constraintEnd_toStartOf="@id/playTimerBtn"
+        />
+
+    <Button
+        android:id="@+id/playTimerBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PLAY"
+        android:enabled="true"
+        android:layout_marginTop="300px"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/stopTimerBtn"
+        app:layout_constraintTop_toBottomOf="@id/timerSeparatorTV"
+
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -36,12 +36,20 @@ class StopwatchActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityStopwatchBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        binding.playButton.setOnClickListener { startTimer() }
+        binding.pauseButton.setOnClickListener { pauseTimer() }
+        binding.resetButton.setOnClickListener { resetTimer() }
     }
 
     private fun startTimer() {
         if (!isRunning) {
             handler.postDelayed(runnable, 1000)
             isRunning = true
+
+            binding.playButton.isEnabled = false
+            binding.pauseButton.isEnabled = true
+            binding.resetButton.isEnabled = true
         }
     }
 
@@ -49,7 +57,20 @@ class StopwatchActivity : AppCompatActivity() {
         if (isRunning) {
             handler.removeCallbacks(runnable)
             isRunning = false
+
+            binding.playButton.isEnabled = true
+            binding.pauseButton.isEnabled = false
+            binding.resetButton.isEnabled = true
         }
+    }
+
+    private fun resetTimer() {
+        pauseTimer()
+        timerSeconds = 0
+        binding.stopwatchTimeTextView.text = "00:00:00"
+        binding.playButton.isEnabled = true
+        binding.pauseButton.isEnabled = false
+        binding.resetButton.isEnabled = false
     }
 
 }
