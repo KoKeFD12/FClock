@@ -27,6 +27,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/timerTitleTV"
         android:layout_marginTop="160px"
+        android:textSize="200px"
+        android:textColor="@color/black"
         android:visibility="invisible"
         />
 
@@ -37,6 +39,7 @@
         app:layout_constraintEnd_toStartOf="@id/timerSeparatorTV"
         app:layout_constraintTop_toBottomOf="@id/timerTitleTV"
         android:visibility="visible"
+        android:layout_marginTop="50px"
         />
 
     <TextView
@@ -48,7 +51,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/timerTitleTV"
-        android:layout_marginTop="160px"
+        android:layout_marginTop="200px"
         />
 
     <NumberPicker
@@ -58,6 +61,7 @@
         app:layout_constraintStart_toEndOf="@id/timerSeparatorTV"
         app:layout_constraintTop_toBottomOf="@id/timerTitleTV"
         android:visibility="visible"
+        android:layout_marginTop="50px"
         />
 
     <Button

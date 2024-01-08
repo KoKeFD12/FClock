@@ -1,12 +1,15 @@
 package com.tint.fclock
 
+import android.app.NotificationChannel
+import android.app.NotificationManager
+import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.CountDownTimer
 import android.view.View
+import androidx.core.app.NotificationCompat
 import com.tint.fclock.databinding.ActivityTimerBinding
 import java.util.Locale
-import kotlin.time.Duration.Companion.seconds
 
 class TimerActivity : AppCompatActivity() {
 
@@ -53,12 +56,19 @@ class TimerActivity : AppCompatActivity() {
 
             override fun onTick(remaining: Long) {
                 var minutes = remaining / 60000
-                var seconds = (remaining - selectedMilis) / 1000
+                var seconds = (remaining/1000)%60
                 binding.countDownTV.text = String.format(Locale.getDefault(), "%02d:%02d", minutes, seconds)
             }
 
             override fun onFinish() {
-                binding.countDownTV.text = "0"
+                binding.countDownTV.text = "00:00"
+                binding.countDownTV.visibility = View.INVISIBLE
+                binding.timerSeparatorTV.visibility = View.VISIBLE
+                binding.minutesNP.visibility = View.VISIBLE
+                binding.secondsNP.visibility = View.VISIBLE
+                binding.stopTimerBtn.isEnabled = false
+                binding.playTimerBtn.isEnabled = true
+                sendNotification()
             }
 
         }
@@ -76,6 +86,32 @@ class TimerActivity : AppCompatActivity() {
         binding.minutesNP.minValue = 0
         binding.minutesNP.maxValue = 59
         binding.minutesNP.wrapSelectorWheel = true
+    }
+
+    fun sendNotification() {
+
+        // Notification channel values
+        val channelId = "timer_notifications"
+        val channelName = "Timer Notifications"
+        val channelImportance = NotificationManager.IMPORTANCE_DEFAULT
+
+        // Notification channel configuration
+        val notificationChannel = NotificationChannel(channelId, channelName, channelImportance)
+        notificationChannel.description = "Used as the main channel for the timer notifications." // Adding a description for the channel
+
+        // Notification manager build
+        val notificationManager = getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
+        // Channel build using the notification manager
+        notificationManager.createNotificationChannel(notificationChannel)
+        // Notification build
+        val notification = NotificationCompat.Builder(this.baseContext, channelId)
+            .setSmallIcon(R.drawable.baseline_circle_notifications_24)
+            .setContentTitle("FClock")
+            .setContentText("Timer has finished")
+            .build()
+
+        // Notification usage
+        notificationManager.notify(1, notification)
     }
 
 }
